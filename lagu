@@ -1,0 +1,72 @@
+
+import time
+import sys
+
+def ketik(teks, delay=0.1):
+    for huruf in teks:
+        print(huruf, end='', flush=True)
+        time.sleep(delay)
+    print()
+
+def tampilkan_lirik(lirik):
+    for baris in lirik:
+        ketik(baris)
+        time.sleep(2)
+
+# Data lirik lagu Hindia
+lagu = {
+    "everything you are": [
+        "Wajahmuuu kuingat selaluuu",
+        "Lupakan hal-hal yang menggangguku",
+        "Karena hari ini mata kita beradu",
+        "Kita saling bantu melepas perasaan",
+        "",
+        "Tinggi ke angkasa, menantang dunia",
+        "Merayakan muda 'tuk satu jam saja",
+        "Kita hampir mati dan kau selamatkan aku",
+        "Dan ku menyelamatkanmu dan sekarang aku tahu",
+        "",
+        "Cerita kita tak jauh berbeda",
+        "Got beat down by the world, sometimes I wanna fold",
+        "Namun suratmu kan kuceritakan ke anak-anakku nanti",
+        "Bahwa aku pernah dicintai with everything you are",
+        "Fully as I am with everything you are",
+        "",
+        "Wajahmu yang beragam rupa",
+        "Pastikan ku tak sendirian",
+        "Jalani derita, kau bawakan kisahmu",
+        "Aku mendengarkan, oh kita bergantian",
+        "",
+        "Bertukar nestapa, menawar trauma",
+        "Datang seadanya, terasku terbuka",
+        "Kita hampir mati dan kau selamatkan aku",
+        "Dan ku menyelamatkanmu dan sekarang aku tahu",
+        "",
+        "Cerita kita tak jauh berbeda",
+        "Got beat down by the world, sometimes I wanna fold",
+        "",
+        "Namun suratmu kan kuceritakan ke anak-anakku nanti",
+        "Bahwa aku pernah dicintai",
+        "Seada-adanya, sekurang-kurangnya",
+        "Walau sulit utarakan hatiku dengan indah",
+        "Walau jarang ku bernyanyi dengan cara yang indah",
+        "Tapi tak sekali pun kisahku pernah kau bantah",
+        "",
+        "Cerita kita tak jauh berbeda",
+        "Got beat down by the world, sometimes I wanna fold",
+        "Namun suratmu kan kuceritakan ke anak-anakku nanti",
+        "Bahwa aku pernah dicintai with everything you are",
+        "Fully as I am with everything you are"
+    ]
+}
+
+print("🎵 Program Lirik Lagu Hindia 🎵")
+judul = input("Masukkan judul lagu Hindia: ").strip()
+
+if judul in lagu:
+    print(f"\n🎶 Menampilkan lirik: {judul} 🎶\n")
+    tampilkan_lirik(lagu[judul])
+else:
+    print("❌ Lagu tidak ditemukan. Judul yang tersedia:")
+    for j in lagu.keys():
+        print("•",)
